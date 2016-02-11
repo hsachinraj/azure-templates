@@ -86,11 +86,11 @@
     }
   },
   "variables": {
-    "nicName": "myVMNic2",
+    "nicName": "myVMNic3",
     "addressPrefix": "10.0.0.0/16",
     "subnet1Name": "Subnet-1",
     "subnet1Prefix": "10.0.0.0/24",
-    "publicIPAddressName": "myPublicIP2",
+    "publicIPAddressName": "myPublicIP3",
     "publicIPAddressType": "Dynamic",
     "vmStorageAccountContainerName": "vhds",
     "vmName": "[parameters('vmDnsName')]",
