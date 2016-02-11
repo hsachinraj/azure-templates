@@ -26,4 +26,4 @@ echo "mysql-server-5.6 mysql-server/root_password password $mysqlPassword" | sud
 echo "mysql-server-5.6 mysql-server/root_password_again password $mysqlPassword" | sudo debconf-set-selections 
 
 #install mysql-server 5.6
-sudo apt-get -y install -y $3
+sudo apt-get install -y $3
