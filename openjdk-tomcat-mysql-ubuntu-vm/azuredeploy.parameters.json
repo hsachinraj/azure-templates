@@ -8,6 +8,12 @@
     "tomcatPackageName": {
       "value": "tomcat7"
     },
+    "mysqlpassword": {
+      "value": "password"
+    },
+       "mysqlversion": {
+      "value": "mysql-server-5.6"
+    },
     "location": {
       "value": "West US"
     },

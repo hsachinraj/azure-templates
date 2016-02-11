@@ -221,14 +221,14 @@
         "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
       ],
       "properties": {
-        "publisher": "Sachin",
+        "publisher": "Microsoft.OSTCExtensions",
         "type": "CustomScriptForLinux",
         "typeHandlerVersion": "1.2",
         "settings": {
           "fileUris": [
             "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/java-tomcat-mysql-install.sh"
           ],
-          "commandToExecute": "[concat('sh java-tomcat-install.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'),' ',parameters('mysqlversion'),' ',parameters('mysqlPassword'))]"
+          "commandToExecute": "[concat('sh java-tomcat-mysql-install.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'),' ',parameters('mysqlversion'),' ',parameters('mysqlPassword'))]"
         }
       }
     }
