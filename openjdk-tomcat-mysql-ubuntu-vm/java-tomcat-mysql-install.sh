@@ -19,7 +19,7 @@ mysqlversion=$3
 mysqlPassword='password'
 sudo apt-get update
 #no password prompt while installing mysql server
-#export DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND=noninteractive
 
 #another way of installing mysql server in a Non-Interactive mode
 echo "mysql-server mysql-server/root_password select $mysqlPassword" | sudo debconf-set-selections 
