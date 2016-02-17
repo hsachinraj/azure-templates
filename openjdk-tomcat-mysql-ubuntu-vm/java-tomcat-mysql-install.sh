@@ -19,13 +19,13 @@ sed -i "s#</tomcat-users>##g" /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="manager-status"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="admin-gui"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
-	echo '  <user username="admin" password="P2ssw0rd" roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
+	echo '  <user username="vmadmin" password="P2ssw0rd" roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '</tomcat-users>' >> /etc/tomcat7/tomcat-users.xml
 
-if netstat -tulpen | grep 8080
-then
-	exit 0
-fi
+#if netstat -tulpen | grep 8080
+#then
+#	exit 0
+#fi
 #Install MySQL
 mysqlversion=$3
 mysqlPassword='password'
