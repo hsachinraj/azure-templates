@@ -32,3 +32,5 @@ echo "mysql-server mysql-server/root_password_again select $mysqlPassword" | sud
 
 #install mysql-server 
 sudo apt-get -y install mysql-server
+mysql -u root --password=$mysqlPassword -e 'create database alm'
+mysql -u root --password=$mysqlpassword -D alm < mydbscript.script
