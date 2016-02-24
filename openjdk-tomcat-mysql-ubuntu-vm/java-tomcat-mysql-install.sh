@@ -1,11 +1,11 @@
 # Install Java
 sudo apt-get -y update
-sudo apt-get install -y $1
+sudo apt-get install -y openjdk-8-jre
 sudo apt-get -y update --fix-missing
-sudo apt-get install -y $1
+sudo apt-get install -y openjdk-8-jre
 
-tomcatadminuser = $2
-tomcatadminpwd = $3
+tomcatadminuser = $1
+tomcatadminpwd = $2
 
 #edit the tomcat users file
 sudo apt-get install -y tomcat7 tomcat7-admin
