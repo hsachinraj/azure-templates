@@ -32,14 +32,14 @@ sudo wget https://raw.githubusercontent.com/hsachinraj/azure-templates/master/op
 echo "file downloaded"
 
 #install mysql if not installed before
- status = $(dpkg-query -W -f='${Status}' mysql-server | awk '{print $3}')
- if [ "$status" = "installed" ];
- then
+# status = $(dpkg-query -W -f='${Status}' mysql-server | awk '{print $3}')
+# if [ "$status" = "installed" ];
+# then
 echo "Skipping installation as package is alreayd installed"
-else
+#else
 #install mysql-server 
 sudo apt-get -y install mysql-server
-fi
+#fi
 
 mysql -u root --password=$mysqlPassword -e 'create database alm'
 mysql -u root --password=$mysqlpassword -D alm < mydbscript.script
