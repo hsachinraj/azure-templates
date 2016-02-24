@@ -20,6 +20,20 @@
         "tomcat8"
       ]
     },
+    "tomcatadminuser": {
+      "type": "string",
+      "defaultValue": "vmadmin",
+     "metadata": {
+        "description": "User name for Tomcat administrator"
+      }
+    },
+   "tomcatadminpwd": {
+      "type": "securestring",
+      "defaultValue": "P2ssw0rd",
+     "metadata": {
+        "description": "Password for the Tomcat administrator"
+      }
+    },
     "mysqlversion": {
       "type": "string",
       "defaultValue": "mysql-server-5.6",
@@ -30,8 +44,9 @@
     },
     	"mysqlPassword": {
       "type": "securestring",
+     "defaultValue": "password",
       "metadata": {
-        "description": "Password for the openvpn user."
+        "description": "Password for root for mysql."
       }
     },
     "location": {
@@ -86,11 +101,11 @@
     }
   },
   "variables": {
-    "nicName": "myVMNic3",
+    "nicName": "myVMNic1",
     "addressPrefix": "10.0.0.0/16",
     "subnet1Name": "Subnet-1",
     "subnet1Prefix": "10.0.0.0/24",
-    "publicIPAddressName": "myPublicIP3",
+    "publicIPAddressName": "myPublicIP1",
     "publicIPAddressType": "Dynamic",
     "vmStorageAccountContainerName": "vhds",
     "vmName": "[parameters('vmDnsName')]",
@@ -228,29 +243,9 @@
           "fileUris": [
             "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/java-tomcat-mysql-install.sh"
                       ],
-          "commandToExecute": "[concat('sh java-tomcat-mysql-install.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'),' ',parameters('mysqlversion'),' ',parameters('mysqlPassword'))]"
+          "commandToExecute": "[concat('sh java-tomcat-mysql-install.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'),' ',parameters('mysqlPassword'))]"
         }
       }
-    }
-    {
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(variables('vmName'),'/newuserscript2')]",
-      "apiVersion": "2015-05-01-preview",
-      "location": "[parameters('location')]",
-      "dependsOn": [
-        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
-      ],
-      "properties": {
-        "publisher": "Microsoft.OSTCExtensions",
-        "type": "CustomScriptForLinux",
-        "typeHandlerVersion": "1.2",
-        "settings": {
-          "fileUris": [
-            "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/install-conf-mysql.sh"
-                      ],
-          "commandToExecute": "[concat('sh install-conf-mysql.sh',' ',parameters('mysqlPassword'))]"
-        }
-      }
-    }
+    },
   ]
 }
