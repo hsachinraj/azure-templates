@@ -243,7 +243,7 @@
           "fileUris": [
             "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/java-tomcat-mysql-install.sh"
                       ],
-          "commandToExecute": "[concat('sh java-tomcat-mysql-install.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'),' ',parameters('mysqlPassword'))]"
+          "commandToExecute": "[concat('sh java-tomcat-mysql-install.sh',' ',parameters('tomcatadminuser'),' ',parameters('tomcatadminpwd'),' ',parameters('mysqlPassword'))]"
         }
       }
     },
