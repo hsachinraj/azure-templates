@@ -23,7 +23,7 @@ sed -i "s#</tomcat-users>##g" /etc/tomcat7/tomcat-users.xml; \
 sudo wget https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/mydbscript.script
 echo "file downloaded"
 
-mysqlPassword=$3
+mysqlpassword=$3
 sudo apt-get update
 #no password prompt while installing mysql server
 export DEBIAN_FRONTEND=noninteractive
@@ -44,6 +44,6 @@ sudo apt-get -y install mysql-server
 
 #fi
 
-mysql -u root --password="$mysqlPassword" -e 'create database alm'
-mysql -u root --password="$mysqlPassword" < mydbscript.script
+mysql -u root --password="$mysqlpassword" -e 'create database alm'
+mysql -u root --password="$mysqlpassword" < mydbscript.script
 
