@@ -35,8 +35,9 @@ echo "file downloaded"
  status = $(dpkg-query -W -f='${Status}' mysql-server | awk '{print $3}')
  if [ "$status" = "installed" ];
  then
-#install mysql-server 
 echo "Skipping installation as package is alreayd installed"
+else
+#install mysql-server 
 sudo apt-get -y install mysql-server
 fi
 
