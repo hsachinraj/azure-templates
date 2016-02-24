@@ -45,5 +45,5 @@ sudo apt-get -y install mysql-server
 #fi
 
 mysql -u root --password="$mysqlPassword" -e 'create database alm'
-mysql -u root --password="$mysqlpassword" < mydbscript.script
+mysql -u root --password="$mysqlPassword" < mydbscript.script
 
