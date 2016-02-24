@@ -226,7 +226,8 @@
         "typeHandlerVersion": "1.2",
         "settings": {
           "fileUris": [
-            "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/java-tomcat-mysql-install.sh"
+            "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/java-tomcat-mysql-install.sh",
+            "https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/dbscript.script"
           ],
           "commandToExecute": "[concat('sh java-tomcat-mysql-install.sh',' ',parameters('javaPackageName'),' ',parameters('tomcatPackageName'),' ',parameters('mysqlversion'),' ',parameters('mysqlPassword'))]"
         }
