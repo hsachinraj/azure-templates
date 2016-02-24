@@ -5,8 +5,14 @@
     "javaPackageName": {
       "value": "openjdk-7-jdk"
     },
-    "tomcatPackageName": {
+        "tomcatPackageName": {
       "value": "tomcat7"
+    },
+       "tomcatadminuser": {
+      "value": "vmadmin"
+    },
+       "tomcatadminpwd": {
+      "value": "P2ssw0rd"
     },
     "mysqlpassword": {
       "value": "password"
@@ -18,16 +24,16 @@
       "value": "West US"
     },
     "newStorageAccountName": {
-      "value": ""
+      "value": "vstsjlrg5storage"
     },
     "vmDnsName": {
-      "value": "javasample1dns"
+      "value": "vstsjlarmrm1"
     },
     "adminUserName": {
-      "value": "javasample1"
+      "value": "vmadmin"
     },
     "adminPassword": {
-      "value": ""
+      "value": "P2ssw0rd"
     }
   }
 }
