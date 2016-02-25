@@ -1,8 +1,7 @@
 # Install Java
 
-sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get -y update
-sudo apt-get install -y oracle-java8-installer
+sudo apt-get install -y openjdk-7-jre
 
 tomcatadminuser = $1
 tomcatadminpwd = $2
