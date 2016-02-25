@@ -15,8 +15,8 @@ sed -i "s#</tomcat-users>##g" /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="manager-status"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="admin-gui"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
-	echo '  <user username="$tomcatadminuser" password="$tomcatadminpwd" roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
-	echo '</tomcat-users>' >> /etc/tomcat7/tomcat-users.xml>
+	echo '  <user username=$tomcatadminuser password=$tomcatadminpwd roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
+	echo '</tomcat-users>' >> /etc/tomcat7/tomcat-users.xml
 	
 	
 
@@ -30,8 +30,8 @@ sudo apt-get update
 export DEBIAN_FRONTEND=noninteractive
 
 #another way of installing mysql server in a Non-Interactive mode
-echo "mysql-server mysql-server/root_password select $mysqlPassword" | sudo debconf-set-selections 
-echo "mysql-server mysql-server/root_password_again select $mysqlPassword" | sudo debconf-set-selections 
+echo "mysql-server mysql-server/root_password select $mysqlpassword" | sudo debconf-set-selections 
+echo "mysql-server mysql-server/root_password_again select $mysqlpassword" | sudo debconf-set-selections 
 sudo apt-get -y install mysql-server
 
 
