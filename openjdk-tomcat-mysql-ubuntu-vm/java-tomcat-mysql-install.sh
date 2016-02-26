@@ -3,8 +3,8 @@
 sudo apt-get -y update
 sudo apt-get install -y openjdk-7-jre
 
-tomcatadminuser = $1
-tomcatadminpwd = $2
+tomcatadminuser=$1
+tomcatadminpwd=$2
 
 #edit the tomcat users file
 sudo apt-get install -y tomcat7 tomcat7-admin
