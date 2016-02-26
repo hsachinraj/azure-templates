@@ -15,7 +15,7 @@ sed -i "s#</tomcat-users>##g" /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="manager-status"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="admin-gui"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
-	echo '  <user username=$tomcatadminuser password=$tomcatadminpwd roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
+	echo '  <user username='$tomcatadminuser' password='$tomcatadminpwd' roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '</tomcat-users>' >> /etc/tomcat7/tomcat-users.xml
 	
 	
