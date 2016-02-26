@@ -19,7 +19,9 @@ sed -i "s#</tomcat-users>##g" /etc/tomcat7/tomcat-users.xml; \
 	echo '  <user username='\"$tomcatadminuser\" 'password='\"$tomcatadminpwd\" 'roles="manager-gui, manager-script, manager-jmx, manager-status, admin-gui, admin-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '</tomcat-users>' >> /etc/tomcat7/tomcat-users.xml
 	
-	
+#restart Tomcat	
+sudo service tomcat7 restart
+
 
 #download the script file to be executed
 sudo wget https://raw.githubusercontent.com/hsachinraj/azure-templates/master/openjdk-tomcat-mysql-ubuntu-vm/mydbscript.script
