@@ -8,6 +8,7 @@ tomcatadminpwd=$2
 
 #edit the tomcat users file
 sudo apt-get install -y tomcat7 tomcat7-admin
+sudo cp /etc/tomcat7/tomcat-users.xml /etc/tomcat7/tomcat-users.xml.bak
 sed -i "s#</tomcat-users>##g" /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="manager-gui"/>' >>  /etc/tomcat7/tomcat-users.xml; \
 	echo '  <role rolename="manager-script"/>' >>  /etc/tomcat7/tomcat-users.xml; \
